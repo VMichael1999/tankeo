@@ -12,13 +12,13 @@ Widget _bar(
   bool charging = false,
   bool compact = false,
 }) => SizedBox(
-  width: 360,
-  height: 110,
+  width: 440,
+  height: 130,
   child: MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: dark ? ThemeData.dark() : AppTheme.light(),
     home: MediaQuery(
-      data: const MediaQueryData(disableAnimations: true),
+      data: const MediaQueryData(disableAnimations: true, size: Size(440, 130)),
       child: Material(
         color: dark ? AppColors.ink : AppColors.bg,
         child: Stack(
@@ -31,7 +31,8 @@ Widget _bar(
               height: 70,
               child: ColoredBox(color: AppColors.primary),
             ),
-            Center(
+            Align(
+              alignment: Alignment.bottomCenter,
               child: TankeoTabBar(
                 selectedIndex: i,
                 onSelected: (_) {},
