@@ -1,0 +1,1471 @@
+{
+  "@@locale": "es",
+  "appName": "TANKEO",
+  "splashTagline": "CARGA RÁPIDO  ·  PAGA DESDE TU AUTO",
+  "carSemantic": "McLaren F1",
+  "carSemanticYear": "McLaren F1 1993",
+  "loginTitle": "Inicia sesión",
+  "loginSubtitle": "¡Hola de nuevo! Ingresa para cargar sin bajarte del auto.",
+  "loginEmailHint": "Correo electrónico",
+  "loginPasswordHint": "Contraseña",
+  "loginShowPassword": "Mostrar contraseña",
+  "loginHidePassword": "Ocultar contraseña",
+  "loginForgot": "¿Olvidaste tu contraseña?",
+  "loginSubmit": "Ingresar",
+  "loginOr": "O ingresa con",
+  "loginNoAccount": "¿No tienes cuenta?",
+  "loginRegister": "Regístrate",
+  "navCar": "Auto",
+  "navCharge": "Carga",
+  "navStations": "Grifos",
+  "navSettings": "Ajustes",
+  "greetingMorning": "Buenos días,\n{name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingAfternoon": "Buenas tardes,\n{name}",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingEvening": "Buenas noches,\n{name}",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeCarSubtitle": "McLaren F1 1993 · Dual gasolina + GNV",
+  "notifications": "Notificaciones",
+  "homeFuelTitle": "Combustible",
+  "homeLastCharge": "Última carga hace 2 días",
+  "homeVolumeOf": "{current} de {capacity} {unit}",
+  "@homeVolumeOf": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "capacity": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "fuelGasoline": "Gasolina",
+  "fuelGnv": "GNV",
+  "homeTotalRange": "Autonomía total",
+  "kmValue": "{count} km",
+  "@kmValue": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "odometerValue": "{km} km",
+  "@odometerValue": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "homeOdometer": "Kilometraje",
+  "homeCheapestGnv": "GNV más barato cerca",
+  "homeFindCheapest": "Encuentra el grifo más barato",
+  "homeSeeStations": "Ver grifos",
+  "etaMinKm": "{minutes} min · {km} km",
+  "@etaMinKm": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      },
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "homeQuickControls": "Controles rápidos",
+  "homeEdit": "Editar",
+  "controlDoors": "Puertas",
+  "controlDoorsOn": "Cerradas",
+  "controlDoorsOff": "Abiertas",
+  "controlGnvOn": "Activo",
+  "controlGnvOff": "Gasolina",
+  "controlLights": "Luces",
+  "controlLightsOn": "Encendidas",
+  "controlLightsOff": "Apagadas",
+  "controlCap": "Tapa",
+  "controlCapOn": "Abierta",
+  "controlCapOff": "Cerrada",
+  "certTitle": "Certificación GNV",
+  "certSubtitle": "Chip Infogas activo · Cilindro {cylinder}",
+  "@certSubtitle": {
+    "placeholders": {
+      "cylinder": {
+        "type": "String"
+      }
+    }
+  },
+  "certValid": "Vigente",
+  "certAnnualExpires": "Anual vence",
+  "certDays": "días",
+  "certReview": "Revisión del cilindro (cada 4 años): {date}",
+  "@certReview": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "spendTitle": "Gasto esta semana",
+  "spendSaved": "Ahorraste {amount}",
+  "@spendSaved": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "spendWithGnv": "usando GNV",
+  "weekdayInitials": "D,L,M,M,J,V,S",
+  "tiresTitle": "Presión de llantas",
+  "tiresLowFrontLeft": "Delantera izq. baja",
+  "tiresCarSemantic": "Auto visto desde arriba",
+  "psi": "psi",
+  "tireLowTemp": "Baja · {temp}°C",
+  "@tireLowTemp": {
+    "placeholders": {
+      "temp": {
+        "type": "int"
+      }
+    }
+  },
+  "tireTemp": "{temp}°C",
+  "@tireTemp": {
+    "placeholders": {
+      "temp": {
+        "type": "int"
+      }
+    }
+  },
+  "gnvSavingsValue": "52%",
+  "gnvSavingsLabel": "Ahorro con GNV",
+  "gnvEfficiencyValue": "13 km/m³",
+  "gnvEfficiencyLabel": "Rendimiento GNV",
+  "fuelRegular": "Regular",
+  "fuelPremium": "Premium",
+  "fuelDiesel": "Diésel B5",
+  "fuelRegularLong": "Gasohol Regular",
+  "fuelPremiumLong": "Gasohol Premium",
+  "mapTitle": "Grifos cercanos",
+  "filters": "Filtros",
+  "zoomIn": "Acercar",
+  "zoomOut": "Alejar",
+  "centerOnCar": "Centrar en mi auto",
+  "mapLocation": "San Isidro, Lima",
+  "cheapestTag": "Más barato",
+  "pumpsAllBusy": "Todos ocupados",
+  "pumpsFree": "{free}/{total} libres",
+  "@pumpsFree": {
+    "placeholders": {
+      "free": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "pumpsFreeShort": "{free}/{total} libres",
+  "@pumpsFreeShort": {
+    "placeholders": {
+      "free": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "ratingLine": "{rating} · {minutes} min · {km} km",
+  "@ratingLine": {
+    "placeholders": {
+      "rating": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "int"
+      },
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "addressLabel": "Dirección",
+  "share": "Compartir",
+  "viewDetail": "Ver detalle",
+  "detailTitle": "Detalle",
+  "save": "Guardar",
+  "moreOptions": "Más opciones",
+  "detailSummary": "Resumen",
+  "open24h": "Abierto 24 h",
+  "open24hLong": "Abierto 24 horas",
+  "detailPumps": "Surtidores",
+  "detailGnvChip": "Chip GNV",
+  "detailInfogasOnline": "Infogas en línea",
+  "detailPayInApp": "Pago en app",
+  "detailPayMethods": "Yape · Plin · Tarjeta",
+  "detailTodayPrices": "Precios de hoy",
+  "pricesIncludeIgv": "Precios incluyen IGV. Compáralos también en Facilito de Osinergmin.",
+  "detailPumpsTitle": "Surtidores",
+  "detailServices": "Servicios",
+  "amenityStore": "Tienda",
+  "amenityRestrooms": "Baños",
+  "amenityAir": "Aire",
+  "amenityWash": "Lavado",
+  "amenityAtm": "Cajero",
+  "amenitySecurity": "Vigilancia 24/7",
+  "detailReviews": "Reseñas",
+  "seeAll": "Ver todo",
+  "reviewCount": "{count} reseñas",
+  "@reviewCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewer1Name": "Lucía Quispe",
+  "reviewer1When": "hace 2 días",
+  "reviewer1Text": "Cargo GNV aquí todos los días con el taxi. Rápido, leen el chip al toque y pago con Yape desde el auto.",
+  "reviewer2Name": "Jorge Ramírez",
+  "reviewer2When": "hace 1 semana",
+  "reviewer2Text": "Buen precio en Regular. En hora punta (7 a 9 am) se forma cola en las islas de GNV.",
+  "detailDistance": "Distancia",
+  "detailByCar": "En auto",
+  "minutesValue": "{minutes} min",
+  "@minutesValue": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "detailFillEstimate": "≈ {amount} para llenar {fuel}",
+  "@detailFillEstimate": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "fuel": {
+        "type": "String"
+      }
+    }
+  },
+  "goToCharge": "Ir a cargar",
+  "pumpFree": "Libre",
+  "pumpBusy": "Ocupado",
+  "pumpFuelsGnv": "GNV · R · P",
+  "pumpFuelsLiquid": "R · P · D",
+  "location": "Ubicación",
+  "pumpLabel": "Surtidor {pump}",
+  "@pumpLabel": {
+    "placeholders": {
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "tankGnvTitle": "Cilindro GNV",
+  "tankGasolineTitle": "Tanque de gasolina",
+  "chipInfogas": "Chip Infogas",
+  "chipValidated": "Chip validado",
+  "levelVolume": "Nivel · {volume} {unit}",
+  "@levelVolume": {
+    "placeholders": {
+      "volume": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "rangeGnv": "Autonomía GNV",
+  "rangeGasoline": "Autonomía gasolina",
+  "chargeHowMuch": "¿Cuánto cargar?",
+  "chargeFull": "Lleno",
+  "chargeFits": "Caben {volume} {unit}",
+  "@chargeFits": {
+    "placeholders": {
+      "volume": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "chargeAuthorize": "Autorizar surtidor {pump}",
+  "@chargeAuthorize": {
+    "placeholders": {
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "chargeValidatingChip": "Validando chip Infogas…",
+  "chargeConnecting": "Conectando con el surtidor…",
+  "chargeViewPump": "Ver surtidor",
+  "chargePay": "Pagar {amount}",
+  "@chargePay": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "sheetDispensing": "Despachando",
+  "sheetComplete": "Carga completa",
+  "sheetHungUp": "Manguera colgada",
+  "sheetSubtitle": "{station} · Surtidor {pump}",
+  "@sheetSubtitle": {
+    "placeholders": {
+      "station": {
+        "type": "String"
+      },
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "minimize": "Minimizar",
+  "lcdProductGnv": "GNV · MANGUERA 2",
+  "lcdProductGasoline": "{product} · MANGUERA 1",
+  "@lcdProductGasoline": {
+    "placeholders": {
+      "product": {
+        "type": "String"
+      }
+    }
+  },
+  "lcdStatusRunning": "EN CURSO",
+  "lcdStatusCompleted": "COMPLETADO",
+  "lcdStatusHungUp": "COLGADA",
+  "lcdStatusReady": "LISTO",
+  "lcdAmount": "IMPORTE S/",
+  "lcdVolume": "VOLUMEN {unit}",
+  "@lcdVolume": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "lcdPrice": "PRECIO S/ / {unit}",
+  "@lcdPrice": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "levelWord": "Nivel",
+  "rangeWord": "Autonomía",
+  "timeWord": "Tiempo",
+  "progressRemaining": "Faltan {amount}",
+  "@progressRemaining": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "progressTotal": "Total {amount}",
+  "@progressTotal": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "sheetDispensingEllipsis": "Despachando…",
+  "sheetAddedProgress": "+{volume} {unit} cargados",
+  "@sheetAddedProgress": {
+    "placeholders": {
+      "volume": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "sheetAddedDone": "+{volume} {unit} · {amount}",
+  "@sheetAddedDone": {
+    "placeholders": {
+      "volume": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "hintStill": "No muevas el auto ni enciendas el motor hasta colgar la manguera.",
+  "hintGnv": "No muevas el auto ni enciendas el motor hasta colgar la manguera. Presión del cilindro: 200 bar.",
+  "hintHangUp": "Cuelga la manguera para cerrar la carga y generar tu comprobante.",
+  "sheetStop": "Detener",
+  "sheetHangUp": "Colgar manguera",
+  "safetyTitle": "Antes de cargar GNV",
+  "safetySubtitle": "Confirma las medidas de seguridad del grifo.",
+  "safetyPassengersOut": "Pasajeros fuera del vehículo",
+  "safetyEngineOff": "Motor y celular apagados",
+  "safetyNoSmoking": "Nadie fuma cerca del surtidor",
+  "cancel": "Cancelar",
+  "safetyStart": "Iniciar carga",
+  "back": "Volver",
+  "summaryTitle": "Resumen de carga",
+  "summaryDone": "Carga completada",
+  "summaryDoneSub": "Manguera colgada · listo para seguir",
+  "summaryLoaded": "cargado",
+  "summaryBefore": "Antes",
+  "summaryNow": "Ahora",
+  "summaryVolume": "Volumen",
+  "summaryStation": "Grifo",
+  "summaryDate": "Fecha",
+  "summaryPump": "Surtidor",
+  "summaryIgv": "IGV (18%)",
+  "receiptTaxable": "Op. gravada",
+  "receiptTotalWord": "Total",
+  "summaryDocument": "Comprobante",
+  "summaryPaymentMethod": "Medio de pago",
+  "summaryPay": "Pagar",
+  "documentBoleta": "Boleta",
+  "documentFactura": "Factura",
+  "documentBoletaLower": "boleta",
+  "documentFacturaLower": "factura",
+  "fieldDni": "DNI",
+  "fieldName": "Nombre",
+  "fieldRuc": "RUC",
+  "fieldBusinessName": "Razón social",
+  "paymentVisaCard": "Tarjeta Visa",
+  "confirmTitle": "Confirmar pago",
+  "confirmPayWith": "Pagar con",
+  "confirmDocument": "Comprobante",
+  "confirmProduct": "Producto",
+  "confirmBoleta": "Boleta · DNI {id}",
+  "@confirmBoleta": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmFactura": "Factura · RUC {id}",
+  "@confirmFactura": {
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmYes": "Sí, pagar",
+  "processingTitle": "Procesando pago",
+  "processingSubtitle": "{amount} con {method}",
+  "@processingSubtitle": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "successTitle": "¡Pago exitoso!",
+  "successSubtitle": "{amount} pagado con {method}",
+  "@successSubtitle": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "successPoints": "+{points} puntos Tankeo",
+  "@successPoints": {
+    "placeholders": {
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "successAsk": "¿Quieres ver tu {document}?",
+  "@successAsk": {
+    "placeholders": {
+      "document": {
+        "type": "String"
+      }
+    }
+  },
+  "successNo": "No, gracias",
+  "successView": "Ver {document}",
+  "@successView": {
+    "placeholders": {
+      "document": {
+        "type": "String"
+      }
+    }
+  },
+  "receiptYourBoleta": "Tu boleta",
+  "receiptYourFactura": "Tu factura",
+  "receiptPrinting": "Imprimiendo…",
+  "receiptPaidWith": "{amount} pagado con {method}",
+  "@receiptPaidWith": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "receiptShare": "Compartir",
+  "receiptDone": "Listo",
+  "receiptBoletaTitle": "BOLETA DE VENTA ELECTRÓNICA",
+  "receiptFacturaTitle": "FACTURA ELECTRÓNICA",
+  "receiptDate": "Fecha",
+  "receiptPump": "Surtidor",
+  "receiptDescription": "DESCRIPCIÓN",
+  "receiptQty": "CANT.",
+  "receiptUnitPrice": "P.U.",
+  "receiptAmount": "IMPORTE",
+  "receiptIgv": "IGV 18%",
+  "receiptTotal": "IMPORTE TOTAL",
+  "receiptPaymentMethod": "Forma de pago",
+  "receiptQrSemantic": "Código QR del comprobante",
+  "receiptLegal": "Representación impresa del comprobante electrónico.\nPrototipo Tankeo · datos de ejemplo, sin valor tributario.",
+  "receiptPaid": "PAGADO",
+  "errRetry": "Reintentar",
+  "errPumpTitle": "Sin conexión con el surtidor {pump}",
+  "@errPumpTitle": {
+    "placeholders": {
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "errPumpBody": "El surtidor no respondió. No se te cobró nada y la manguera sigue bloqueada.",
+  "errPumpOther": "Usar otro surtidor",
+  "errCertTitle": "Carga de GNV bloqueada",
+  "errCertBodyA": "Infogas indica que la certificación anual de tu cilindro ",
+  "errCertBodyB": "venció el {date}",
+  "@errCertBodyB": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "errCertBodyC": ". Renuévala en un taller autorizado para volver a cargar GNV.",
+  "errCertGasoline": "Cargar gasolina",
+  "errCertView": "Ver certificación",
+  "errPayTitle": "Pago rechazado",
+  "errPayBodyA": "{method} no autorizó el cargo de ",
+  "@errPayBodyA": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "errPayBodyC": ". No se te cobró nada.",
+  "errPayChange": "Cambiar método",
+  "queueTitleBusy": "Todos los surtidores están ocupados",
+  "queueTitleReady": "¡Surtidor {pump} libre!",
+  "@queueTitleReady": {
+    "placeholders": {
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "queueSubWait": "Te avisamos apenas se libere uno. Espera aprox. {min} min.",
+  "@queueSubWait": {
+    "placeholders": {
+      "min": {
+        "type": "int"
+      }
+    }
+  },
+  "queueSubReady": "Acércate a la {isle}. Tienes 3 min para autorizar.",
+  "@queueSubReady": {
+    "placeholders": {
+      "isle": {
+        "type": "String"
+      }
+    }
+  },
+  "queueInQueue": "en la cola",
+  "queueYourTurn": "te toca",
+  "queueAhead": "Autos antes que tú",
+  "queueStation": "Grifo",
+  "queueLeave": "Salir de la cola",
+  "queueWaiting": "Esperando…",
+  "queueGo": "Ir al surtidor",
+  "simTitle": "Simular errores",
+  "simCert": "Certificación GNV vencida",
+  "simCertSub": "bloquea la carga de GNV",
+  "simPump": "Surtidor sin conexión",
+  "simPumpSub": "una vez, al autorizar",
+  "simPay": "Pago rechazado",
+  "simPaySub": "una vez, al pagar",
+  "certExpiredBadge": "Vencida",
+  "certExpiredOn": "Anual venció",
+  "certRenew": "Renovar",
+  "filterTitle": "Filtros",
+  "filterClear": "Limpiar",
+  "filterFree": "Con surtidores libres",
+  "filterFreeSub": "Oculta los grifos llenos",
+  "filterApp": "Pago desde la app",
+  "filterAppSub": "Yape, Plin o tarjeta en el surtidor",
+  "filterDistance": "Distancia máxima",
+  "filterAll": "Todas",
+  "filterServices": "Servicios",
+  "filterShow": "Mostrar {count} {stations}",
+  "@filterShow": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "stations": {
+        "type": "String"
+      }
+    }
+  },
+  "filterStationOne": "grifo",
+  "filterStationMany": "grifos",
+  "filterNone": "Ningún grifo coincide",
+  "toastFiltersCount": "{count} {what}",
+  "@toastFiltersCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "what": {
+        "type": "String"
+      }
+    }
+  },
+  "toastFiltersMatchOne": "grifo coincide.",
+  "toastFiltersMatchMany": "grifos coinciden.",
+  "toastHiddenByFilters": "Ese grifo está oculto por tus filtros.",
+  "toastNewPump": "Te asignamos el surtidor {pump}.",
+  "@toastNewPump": {
+    "placeholders": {
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "toastLeftQueue": "Saliste de la cola.",
+  "toastPickAnotherMethod": "Elige otro método y vuelve a pagar.",
+  "toastDieselInfo": "Tu McLaren F1 no usa diésel: solo verás los precios.",
+  "toastFinishCurrentCharge": "Termina tu carga actual antes de ir a otro grifo.",
+  "toastPayPreviousFirst": "Primero paga tu carga anterior.",
+  "toastArrived": "Llegaste a {station}. Surtidor {pump} asignado.",
+  "@toastArrived": {
+    "placeholders": {
+      "station": {
+        "type": "String"
+      },
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "toastGridBusy": "Todos los surtidores están ocupados: espera aprox. 6 min.",
+  "toastChipValidated": "Chip Infogas validado · cilindro con certificación vigente.",
+  "toastChargeComplete": "Carga completa. Cuelga la manguera para pagar.",
+  "toastGnvPreferred": "El auto usará GNV y cambiará a gasolina si se acaba.",
+  "toastGasolineOnly": "El auto usará solo gasolina.",
+  "toastStationShared": "Ubicación de {station} copiada.",
+  "@toastStationShared": {
+    "placeholders": {
+      "station": {
+        "type": "String"
+      }
+    }
+  },
+  "toastFavoriteAdded": "Grifo guardado en favoritos.",
+  "toastFavoriteRemoved": "Quitado de favoritos.",
+  "toastFiltersInfo": "Filtros: abierto ahora · pago en app",
+  "toastSettingsUnavailable": "Ajustes todavía no está disponible.",
+  "toastInvalidDni": "El DNI debe tener 8 dígitos.",
+  "toastInvalidRuc": "El RUC debe tener 11 dígitos y empezar con 10 o 20.",
+  "toastReceiptShared": "Comprobante listo para compartir (PDF y XML).",
+  "toastPaidByEmail": "Pagaste {amount}. Te enviamos la {document} por correo.",
+  "@toastPaidByEmail": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "document": {
+        "type": "String"
+      }
+    }
+  },
+  "close": "Cerrar",
+  "continueLabel": "Continuar",
+  "done": "Listo",
+  "yes": "Sí",
+  "soles": "S/",
+  "notificationsTitle": "Notificaciones",
+  "notificationsReadAll": "Leer todo",
+  "notificationsEmpty": "No tienes avisos nuevos.",
+  "notifCertTitle": "Certificación por vencer",
+  "notifCertBody": "Tu certificación anual de GNV vence el {date}. Agenda tu renovación.",
+  "@notifCertBody": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "notifPriceTitle": "Bajó el precio del GNV",
+  "notifPriceBody": "GNV a {price} en {station}. Es el más barato cerca de ti.",
+  "@notifPriceBody": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      },
+      "station": {
+        "type": "String"
+      }
+    }
+  },
+  "notifPaymentTitle": "Pago registrado",
+  "notifPaymentBody": "Pagaste {amount} en {station}. Tu {document} ya está disponible.",
+  "@notifPaymentBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "station": {
+        "type": "String"
+      },
+      "document": {
+        "type": "String"
+      }
+    }
+  },
+  "notifPointsTitle": "Ganaste {points} puntos",
+  "@notifPointsTitle": {
+    "placeholders": {
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "notifPointsBody": "Por tu última carga. Ya tienes {balance} puntos Tankeo.",
+  "@notifPointsBody": {
+    "placeholders": {
+      "balance": {
+        "type": "String"
+      }
+    }
+  },
+  "notifApptTitle": "Cita confirmada",
+  "notifApptBody": "Renovación en {shop}, {day} a las {time}.",
+  "@notifApptBody": {
+    "placeholders": {
+      "shop": {
+        "type": "String"
+      },
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "timeNow": "ahora",
+  "timeMinutesAgo": "hace {n} min",
+  "@timeMinutesAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeHoursAgo": "hace {n} h",
+  "@timeHoursAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "timeDaysAgo": "hace {n} d",
+  "@timeDaysAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "historyTitle": "Historial de cargas",
+  "historyMonthTotal": "Gastado en {month}",
+  "@historyMonthTotal": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "historyChargesCount": "{n} cargas",
+  "@historyChargesCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "historyGnvShare": "{pct} % con GNV",
+  "@historyGnvShare": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      }
+    }
+  },
+  "filterInvoices": "Facturas",
+  "historyNew": "Nuevo",
+  "historyEmpty": "No hay cargas con este filtro.",
+  "historyDocLine": "{document} · {volume} {unit}",
+  "@historyDocLine": {
+    "placeholders": {
+      "document": {
+        "type": "String"
+      },
+      "volume": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "certScreenTitle": "Certificación GNV",
+  "certStatusValid": "Vigente",
+  "certStatusExpired": "Vencida",
+  "certDaysLeft": "{n} días restantes",
+  "@certDaysLeft": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "certExpiredDaysAgo": "Venció hace {n} días",
+  "@certExpiredDaysAgo": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "certDataTitle": "Datos del cilindro",
+  "certChip": "Chip Infogas",
+  "certCylinderLabel": "Cilindro",
+  "certShop": "Taller",
+  "certValidUntil": "Vigente hasta",
+  "certNextReview": "Próxima revisión",
+  "certTimeline": "Historial de inspecciones",
+  "certInspectionAnnual": "Inspección anual",
+  "certInspectionConversion": "Conversión e instalación",
+  "certApproved": "Aprobada",
+  "certSchedule": "Agendar renovación",
+  "certScheduled": "Cita agendada",
+  "certScheduledBody": "{shop} · {day}, {time}",
+  "@certScheduledBody": {
+    "placeholders": {
+      "shop": {
+        "type": "String"
+      },
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "certScheduleTitle": "Agendar renovación",
+  "certScheduleShop": "Taller",
+  "certScheduleDay": "Día",
+  "certScheduleTime": "Hora",
+  "certScheduleConfirm": "Confirmar cita",
+  "shopSurco": "GNV Autorizado Surco",
+  "shopMiraflores": "Taller Infogas Miraflores",
+  "shopLince": "Centro GNV Lince",
+  "weekdayShort": "dom,lun,mar,mié,jue,vie,sáb",
+  "toastApptConfirmed": "Cita confirmada en {shop}.",
+  "@toastApptConfirmed": {
+    "placeholders": {
+      "shop": {
+        "type": "String"
+      }
+    }
+  },
+  "pointsTitle": "Puntos Tankeo",
+  "pointsBalance": "Tu saldo",
+  "pointsUnit": "puntos",
+  "pointsTierSilver": "Nivel Plata",
+  "pointsTierGold": "Nivel Oro",
+  "pointsToGold": "{n} puntos para Oro",
+  "@pointsToGold": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "pointsRule": "Ganas 1 punto por cada S/ 1 cargado.",
+  "pointsRedeem": "Canjea",
+  "pointsMovements": "Movimientos",
+  "pointsMissing": "Faltan {n}",
+  "@pointsMissing": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "pointsRewardGnv": "S/ 5 en GNV",
+  "pointsRewardCoffee": "Café en tienda",
+  "pointsRewardWash": "Lavado de auto",
+  "pointsRewardGasoline": "S/ 20 en gasolina",
+  "pointsCost": "{n} pts",
+  "@pointsCost": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "redeemTitle": "¿Canjear {reward}?",
+  "@redeemTitle": {
+    "placeholders": {
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "redeemBody": "Se descontarán {cost} puntos. Te quedarán {left}.",
+  "@redeemBody": {
+    "placeholders": {
+      "cost": {
+        "type": "String"
+      },
+      "left": {
+        "type": "String"
+      }
+    }
+  },
+  "redeemConfirm": "Canjear",
+  "toastRedeemed": "Canje listo. Tu código es {code}.",
+  "@toastRedeemed": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "movementCharge": "Carga en {station}",
+  "@movementCharge": {
+    "placeholders": {
+      "station": {
+        "type": "String"
+      }
+    }
+  },
+  "movementWelcome": "Regalo de bienvenida",
+  "movementRedeem": "Canje: {reward}",
+  "@movementRedeem": {
+    "placeholders": {
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsTitle": "Ajustes",
+  "settingsAccount": "Mi cuenta",
+  "settingsPrefs": "Preferencias",
+  "settingsSupport": "Soporte",
+  "settingsVehicles": "Mis vehículos",
+  "settingsPayments": "Métodos de pago",
+  "settingsBilling": "Datos de facturación",
+  "settingsHistory": "Historial de cargas",
+  "settingsCert": "Certificación GNV",
+  "settingsPoints": "Puntos Tankeo",
+  "settingsNotifications": "Notificaciones",
+  "settingsPriceAlerts": "Avisos de bajada de precio",
+  "settingsCertReminder": "Recordatorio de certificación",
+  "settingsPreferredFuel": "Combustible preferido",
+  "settingsHelp": "Ayuda y contacto",
+  "settingsLogout": "Cerrar sesión",
+  "settingsVersion": "Tankeo 1.0",
+  "settingsCredits": "Modelo 3D «McLaren F1 1993» de Alex.Ka. (Sketchfab) · CC BY-NC 4.0",
+  "profilePoints": "{n} pts",
+  "@profilePoints": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "profilePhone": "+51 987 654 321",
+  "logoutTitle": "¿Cerrar sesión?",
+  "logoutBody": "Tendrás que volver a ingresar para cargar desde tu auto.",
+  "logoutConfirm": "Cerrar sesión",
+  "toastHelp": "Escríbenos a ayuda@tankeo.pe y te respondemos en minutos.",
+  "vehiclesTitle": "Mis vehículos",
+  "vehicleInUse": "En uso",
+  "vehicleAdd": "Agregar vehículo",
+  "vehicleTankGas": "Tanque {pct} %",
+  "@vehicleTankGas": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      }
+    }
+  },
+  "vehicleTankGnv": "Cilindro {pct} %",
+  "@vehicleTankGnv": {
+    "placeholders": {
+      "pct": {
+        "type": "int"
+      }
+    }
+  },
+  "vehicleCertOk": "Certificación vigente",
+  "vehicleCertNone": "Sin GNV",
+  "vehicleFuelDual": "Dual gasolina + GNV",
+  "vehicleFuelGasoline": "Solo gasolina",
+  "vehicleFuelGnv": "Solo GNV",
+  "vehicleFuelDualShort": "Dual",
+  "vehicleUse": "Usar",
+  "paymentsTitle": "Métodos de pago",
+  "paymentDefault": "Predeterminado",
+  "paymentUse": "Usar",
+  "paymentRemove": "Quitar",
+  "paymentAddCard": "Agregar tarjeta",
+  "paymentSecurityNote": "Tus tarjetas se guardan cifradas: solo conservamos un token y los últimos 4 dígitos.",
+  "paymentYapeLabel": "Yape",
+  "paymentPlinLabel": "Plin",
+  "paymentCardDetail": "Vence {date}",
+  "@paymentCardDetail": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "paymentPhoneDetail": "Celular •••• {last}",
+  "@paymentPhoneDetail": {
+    "placeholders": {
+      "last": {
+        "type": "String"
+      }
+    }
+  },
+  "toastPaymentDefault": "{method} es tu método predeterminado.",
+  "@toastPaymentDefault": {
+    "placeholders": {
+      "method": {
+        "type": "String"
+      }
+    }
+  },
+  "toastPaymentRemoved": "Método quitado.",
+  "toastPaymentLast": "Debes conservar al menos un método de pago.",
+  "toastCardAdded": "Tarjeta agregada.",
+  "cardTitle": "Agregar tarjeta",
+  "cardNumber": "Número de tarjeta",
+  "cardExpiry": "MM/AA",
+  "cardCvv": "CVV",
+  "cardHolder": "Titular de la tarjeta",
+  "cardHolderPreview": "TITULAR",
+  "cardSave": "Guardar tarjeta",
+  "errCardNumber": "Número de tarjeta no válido.",
+  "errCardExpiry": "Fecha vencida o no válida.",
+  "errCardCvv": "CVV de 3 o 4 dígitos.",
+  "errCardHolder": "Escribe nombre y apellido.",
+  "cardBrandVisa": "Visa",
+  "cardBrandMastercard": "Mastercard",
+  "cardBrandAmex": "Amex",
+  "cardBrandCard": "Tarjeta",
+  "billingTitle": "Datos de facturación",
+  "billingBoleta": "Para boletas",
+  "billingFactura": "Para facturas",
+  "billingNote": "Se usarán para rellenar el comprobante en el resumen de carga.",
+  "toastBillingSaved": "Datos de facturación guardados.",
+  "signupTitle": "Crea tu cuenta",
+  "signupStepAccount": "Tu cuenta",
+  "signupStepVehicle": "Tu vehículo",
+  "signupStepGnv": "Tu cilindro GNV",
+  "signupStepCounter": "{step}/{total}",
+  "@signupStepCounter": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "signupName": "Nombre completo",
+  "signupEmail": "Correo electrónico",
+  "signupPhone": "Celular",
+  "signupPassword": "Contraseña",
+  "signupTerms": "Acepto los términos y la política de privacidad",
+  "errName": "Escribe nombre y apellido.",
+  "errEmail": "Correo no válido.",
+  "errPhone": "Celular de 9 dígitos que empieza con 9.",
+  "errPassword": "Usa 8 caracteres, mayúscula y número.",
+  "errTerms": "Debes aceptar los términos.",
+  "strengthWeak": "Débil",
+  "strengthMedium": "Media",
+  "strengthStrong": "Fuerte",
+  "vehicleName": "Marca y modelo",
+  "vehiclePlate": "Placa",
+  "vehicleYear": "Año",
+  "vehicleFuelType": "Combustible",
+  "vehicleTankCapacity": "Capacidad del tanque (gal)",
+  "vehicleCylinderCapacity": "Capacidad del cilindro (m³)",
+  "errVehicleName": "Escribe la marca y el modelo.",
+  "errPlate": "Placa con formato ABC-123.",
+  "errYear": "Año no válido.",
+  "gnvChip": "Chip Infogas",
+  "gnvChipHint": "0000-0000-00",
+  "gnvExpiry": "Vence la certificación",
+  "gnvExpiryHint": "dd/mm/aaaa",
+  "gnvCylinderType": "Tipo de cilindro",
+  "gnvCylinderNote": "Los GNV-1 se revisan cada 5 años; los GNV-2 y GNV-4, cada 4.",
+  "errChip": "Chip con formato 0000-0000-00.",
+  "errExpiry": "Fecha no válida.",
+  "signupNext": "Continuar",
+  "signupStart": "Empezar a usar Tankeo",
+  "signupAddFinish": "Guardar vehículo",
+  "signupDoneTitle": "¡Listo, {name}!",
+  "@signupDoneTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "signupDoneBody": "Tu cuenta está creada. Empieza a cargar sin bajarte del auto.",
+  "signupGift": "+{n} puntos de bienvenida",
+  "@signupGift": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "addVehicleTitle": "Agregar vehículo",
+  "resetTitle": "Recupera tu contraseña",
+  "resetEmailBody": "Escribe tu correo y te enviamos un código de 4 dígitos.",
+  "resetSend": "Enviar código",
+  "resetCodeTitle": "Revisa tu correo",
+  "resetCodeBody": "Ingresa el código que enviamos a {email}.",
+  "@resetCodeBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "resetVerify": "Verificar código",
+  "resetResend": "Reenviar código",
+  "resetResendIn": "Reenviar en {n} s",
+  "@resetResendIn": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "resetWrongCode": "Código incorrecto. Te quedan {n} intentos.",
+  "@resetWrongCode": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "resetNoAttempts": "Sin intentos. Pide un código nuevo.",
+  "resetNewTitle": "Crea una contraseña nueva",
+  "resetNewBody": "Usa una que no hayas usado antes.",
+  "resetNewPassword": "Contraseña nueva",
+  "resetRepeatPassword": "Repite la contraseña",
+  "resetMismatch": "Las contraseñas no coinciden.",
+  "resetUpdate": "Actualizar contraseña",
+  "toastPasswordUpdated": "Contraseña actualizada.",
+  "toastCodeSent": "Te enviamos un código nuevo.",
+  "minutes": "{n} min",
+  "@minutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "navOverview": "Vista general",
+  "navTurnRight": "Gira a la derecha en {street}",
+  "@navTurnRight": {
+    "placeholders": {
+      "street": {
+        "type": "String"
+      }
+    }
+  },
+  "navTurnLeft": "Gira a la izquierda en {street}",
+  "@navTurnLeft": {
+    "placeholders": {
+      "street": {
+        "type": "String"
+      }
+    }
+  },
+  "navStraight": "Sigue recto por {street}",
+  "@navStraight": {
+    "placeholders": {
+      "street": {
+        "type": "String"
+      }
+    }
+  },
+  "navDestination": "Tu destino: {station}",
+  "@navDestination": {
+    "placeholders": {
+      "station": {
+        "type": "String"
+      }
+    }
+  },
+  "navThen": "Luego",
+  "navInDistance": "En {distance}",
+  "@navInDistance": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "navMeters": "{n} m",
+  "@navMeters": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "navKm": "{n} km",
+  "@navKm": {
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "navArrivedBanner": "Llegaste · Entra a la isla {isle} · surtidor {pump}",
+  "@navArrivedBanner": {
+    "placeholders": {
+      "isle": {
+        "type": "String"
+      },
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "navArrivedTitle": "Llegaste",
+  "navRemaining": "{distance} en {minutes} min",
+  "@navRemaining": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "navArrival": "llegada {time}",
+  "@navArrival": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "navContinue": "Continuar a la carga",
+  "navSlideContinue": "Desliza para ir a la carga",
+  "navOverviewTag": "Vista general de la ruta",
+  "navDistanceThen": "luego gira",
+  "navTurnNow": "Gira ahora",
+  "navTurnLeftOn": "A la izquierda en {street}",
+  "@navTurnLeftOn": {
+    "placeholders": {
+      "street": {
+        "type": "String"
+      }
+    }
+  },
+  "navTurnRightOn": "A la derecha en {street}",
+  "@navTurnRightOn": {
+    "placeholders": {
+      "street": {
+        "type": "String"
+      }
+    }
+  },
+  "navLeftPlain": "Gira a la izquierda",
+  "navRightPlain": "Gira a la derecha",
+  "navStraightPlain": "Sigue recto",
+  "navNextLeftPlain": "Luego a la izquierda",
+  "navNextRightPlain": "Luego a la derecha",
+  "navNextStraightPlain": "Luego sigue recto",
+  "navNextLeft": "Luego a la izquierda en",
+  "navNextRight": "Luego a la derecha en",
+  "navNextStraight": "Luego sigue recto por",
+  "navNextDestination": "Luego llegas a",
+  "navEtaLine": "{distance} · llegada {time}",
+  "@navEtaLine": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "navExitTitle": "¿Salir de la navegación?",
+  "navExitBody": "Dejarás de recibir indicaciones hacia el grifo.",
+  "navExitKeep": "Seguir",
+  "navExitConfirm": "Salir",
+  "navSpeedLimit": "Límite {n} km/h",
+  "@navSpeedLimit": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "navDestinationOpen": "Ver detalle del grifo",
+  "arrivalBannerEyebrow": "Llegaste a tu grifo",
+  "arrivalBannerTitle": "Entra a la isla {island}",
+  "@arrivalBannerTitle": {
+    "placeholders": {
+      "island": {
+        "type": "String"
+      }
+    }
+  },
+  "arrivalBannerSubtitle": "Surtidor {pump} · a tu {side}",
+  "@arrivalBannerSubtitle": {
+    "placeholders": {
+      "pump": {
+        "type": "String"
+      },
+      "side": {
+        "type": "String"
+      }
+    }
+  },
+  "arrivalSideRight": "derecha",
+  "arrivalSideLeft": "izquierda",
+  "arrivalChip": "Llegaste",
+  "arrivalStatDistance": "Recorrido",
+  "arrivalStatTime": "Tiempo",
+  "arrivalStatArrival": "Llegada",
+  "arrivalPumpShort": "SURT.",
+  "arrivalPumpTitle": "Isla {island} · {fuels}",
+  "@arrivalPumpTitle": {
+    "placeholders": {
+      "island": {
+        "type": "String"
+      },
+      "fuels": {
+        "type": "String"
+      }
+    }
+  },
+  "arrivalFuelsBoth": "GNV y gasolina",
+  "arrivalPumpFree": "Libre ahora",
+  "arrivalPumpBusy": "Ocupado · te toca pronto",
+  "arrivalSlide": "Desliza para empezar la carga",
+  "arrivalExit": "Salir de la navegación",
+  "navPumpChip": "Surtidor {pump}",
+  "@navPumpChip": {
+    "placeholders": {
+      "pump": {
+        "type": "String"
+      }
+    }
+  },
+  "navIsleChip": "Isla {isle}",
+  "@navIsleChip": {
+    "placeholders": {
+      "isle": {
+        "type": "String"
+      }
+    }
+  },
+  "navDistanceChip": "{distance} · {minutes} min",
+  "@navDistanceChip": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "navExit": "Salir",
+  "navView2d": "2D",
+  "navView3d": "3D",
+  "navRecenter": "Recentrar",
+  "navSpeedUnit": "km/h",
+  "toastNear3d": "Estás cerca: vista 3D activada.",
+  "streetCanaval": "Av. Canaval y Moreyra",
+  "streetJavierPrado": "Av. Javier Prado",
+  "streetPetitThouars": "Av. Petit Thouars",
+  "streetArequipa": "Av. Arequipa",
+  "streetAmericaSur": "Calle Los Cedros"
+}
