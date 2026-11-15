@@ -1,25 +1,16 @@
-import 'dart:math' as math;
-import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
 
 import '../theme/app_colors.dart';
 import '../theme/app_text.dart';
 import '../theme/tankeo_tokens.dart';
 
-/// Barra de pestañas flotante al estilo de iOS 26 (Liquid Glass): vidrio
-/// claro con desenfoque y saturación, ícono con nombre debajo y una lente
-/// que se desliza con resorte hasta la pestaña activa.
-///
-/// - Tocar: el ítem se encoge a 0.92 y la lente viaja estirándose un 12 %.
-/// - Arrastrar: la lente sigue al dedo (crece un 6 %) y se pega a la pestaña
-///   más cercana al soltar.
-/// - [compact]: 52 de alto y solo íconos (al hacer scroll hacia abajo).
-/// - [charging]: punto naranja que late en Carga mientras hay una sesión.
-class TankeoTabBar extends StatefulWidget {
+/// Barra de pestañas flotante con `liquid_glass_widgets` (`GlassTabBar`):
+/// vidrio claro de iOS 27, ícono con nombre debajo, lente del paquete que
+/// se arrastra entre pestañas, color de la app en la activa y punto naranja
+/// en Carga mientras hay una sesión.
+class TankeoTabBar extends StatelessWidget {
   const TankeoTabBar({
     super.key,
     required this.selectedIndex,
@@ -39,402 +30,86 @@ class TankeoTabBar extends StatefulWidget {
 
   /// Texto accesible del punto de carga («Carga en curso»).
   final String? chargingLabel;
+
+  /// Solo íconos y 52 de alto (al hacer scroll hacia abajo).
   final bool compact;
 
   static const width = TankeoTokens.navWidth;
-  static const itemW = 76.0;
-  static const pad = 6.0;
   static const chargeTab = 1;
 
-  /// Posición izquierda de la lente para la pestaña [i].
-  static double lensLeft(int i) => pad + itemW * i;
+  /// Margen vertical que el paquete deja alrededor de la barra.
+  static const verticalPadding = 20.0;
 
-  /// Pestaña más cercana a una posición de la lente.
-  static int nearest(double lensX) =>
-      ((lensX - pad) / itemW).round().clamp(0, 3);
-
-  @override
-  State<TankeoTabBar> createState() => _TankeoTabBarState();
-}
-
-class _TankeoTabBarState extends State<TankeoTabBar>
-    with TickerProviderStateMixin {
-  late final AnimationController _lens = AnimationController.unbounded(
-    vsync: this,
-    value: TankeoTabBar.lensLeft(widget.selectedIndex),
-  );
-  late final AnimationController _pulse = AnimationController(
-    vsync: this,
-    duration: const Duration(milliseconds: 1400),
-  );
-  double _from = 0;
-  double _to = 0;
-  bool _dragging = false;
-  int? _pressed;
-
-  static const _spring = SpringDescription(
-    mass: 1,
-    stiffness: 400,
-    damping: 30,
-  );
-
-  bool get _reduce => MediaQuery.disableAnimationsOf(context);
-
-  @override
-  void initState() {
-    super.initState();
-    _from = _to = _lens.value;
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    _syncPulse();
-  }
-
-  @override
-  void didUpdateWidget(TankeoTabBar old) {
-    super.didUpdateWidget(old);
-    if (old.selectedIndex != widget.selectedIndex && !_dragging) {
-      _slideTo(widget.selectedIndex);
-    }
-    if (old.charging != widget.charging) _syncPulse();
-  }
-
-  void _syncPulse() {
-    if (widget.charging && !_reduce) {
-      if (!_pulse.isAnimating) _pulse.repeat(reverse: true);
-    } else {
-      _pulse
-        ..stop()
-        ..value = 0;
-    }
-  }
-
-  @override
-  void dispose() {
-    _lens.dispose();
-    _pulse.dispose();
-    super.dispose();
-  }
-
-  void _slideTo(int i) {
-    final target = TankeoTabBar.lensLeft(i);
-    _from = _lens.value;
-    _to = target;
-    if (_reduce) {
-      _lens.value = target;
-      return;
-    }
-    _lens.animateWith(SpringSimulation(_spring, _lens.value, target, 0));
-  }
-
-  void _select(int i) {
-    if (i != widget.selectedIndex) {
-      HapticFeedback.selectionClick();
-      widget.onSelected(i);
-    }
-    _slideTo(i);
-  }
-
-  void _dragTo(double localX) {
-    final x = (localX - TankeoTabBar.itemW / 2).clamp(
-      TankeoTabBar.lensLeft(0),
-      TankeoTabBar.lensLeft(3),
-    );
-    _lens.value = x;
-  }
+  /// Margen lateral para que la barra mida [width] en una pantalla de
+  /// ancho [screenWidth].
+  static double horizontalPaddingFor(double screenWidth) =>
+      ((screenWidth - width) / 2).clamp(8.0, double.infinity);
 
   @override
   Widget build(BuildContext context) {
     final dark = Theme.of(context).brightness == Brightness.dark;
+    final active = dark ? AppColors.primaryLight : AppColors.primary;
+    final idle = dark ? AppColors.tabInactiveDark : AppColors.tabInactive;
     final solid = MediaQuery.highContrastOf(context);
-    final h = widget.compact
-        ? TankeoTokens.navHeightCompact
-        : TankeoTokens.navHeight;
-    final lensH = h - 10;
-    final glass = (dark ? AppColors.tabGlassDark : AppColors.tabGlass)
-        .withValues(alpha: solid ? 1 : .72);
-    final dur = _reduce ? Duration.zero : const Duration(milliseconds: 250);
+    final base = dark
+        ? LiquidGlassSettings.ios27Dark
+        : LiquidGlassSettings.ios27Light;
+    final settings = solid
+        ? base.copyWith(
+            glassColor: dark ? AppColors.tabGlassDark : AppColors.tabGlass,
+          )
+        : base;
+    final h = compact ? TankeoTokens.navHeightCompact : TankeoTokens.navHeight;
 
-    final bar = AnimatedContainer(
-      duration: dur,
-      curve: Curves.easeOut,
-      width: TankeoTabBar.width,
-      height: h,
-      // Bordes en primer plano: no restan espacio a las pestañas.
-      foregroundDecoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(h / 2),
-        border: Border.all(
-          color: AppColors.black.withValues(alpha: .08),
-          width: .5,
-        ),
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(h / 2),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.scrim.withValues(alpha: .28),
-            offset: const Offset(0, 12),
-            blurRadius: 28,
-            spreadRadius: -10,
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(h / 2),
-        child: BackdropFilter(
-          filter: solid
-              ? ui.ImageFilter.blur()
-              : ui.ImageFilter.compose(
-                  outer: ColorFilter.matrix(_saturation(1.8)),
-                  inner: ui.ImageFilter.blur(sigmaX: 30, sigmaY: 30),
-                ),
-          child: Container(
-            decoration: BoxDecoration(
-              color: glass,
-              borderRadius: BorderRadius.circular(h / 2),
-            ),
-            foregroundDecoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(h / 2),
-              border: Border.all(
-                color: AppColors.white.withValues(alpha: dark ? .08 : .7),
-                width: .5,
-              ),
-            ),
-            child: Stack(
-              children: [
-                // Brillo superior de 1 px.
-                Positioned(
-                  left: h / 2,
-                  right: h / 2,
-                  top: 0,
-                  height: 1,
-                  child: ColoredBox(
-                    color: AppColors.white.withValues(alpha: dark ? .12 : .9),
-                  ),
-                ),
-                AnimatedBuilder(
-                  animation: _lens,
-                  builder: (context, _) {
-                    final span = (_to - _from).abs();
-                    final t = span < 1
-                        ? 1.0
-                        : ((_lens.value - _from) / (_to - _from)).clamp(
-                            0.0,
-                            1.0,
-                          );
-                    final stretch = _dragging
-                        ? 1.06
-                        : 1 + .12 * math.sin(math.pi * t);
-                    return Positioned(
-                      left: _lens.value,
-                      top: (h - lensH) / 2,
-                      width: TankeoTabBar.itemW,
-                      height: lensH,
-                      child: Transform.scale(
-                        scaleX: stretch,
-                        scaleY: _dragging ? 1.06 : 1,
-                        child: _Lens(dark: dark, height: lensH),
-                      ),
-                    );
-                  },
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: TankeoTabBar.pad,
-                  ),
-                  child: Row(
-                    children: [
-                      for (var i = 0; i < 4; i++) _item(i, dark, h - 10),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
+    Widget icon(int i, {required bool on}) => _TabIcon(
+      index: i,
+      color: on ? active : idle,
+      active: on,
+      charging: charging && i == chargeTab,
+      dark: dark,
     );
 
-    // La barra vive fuera del Scaffold: sin Material los textos salen
-    // subrayados.
+    // Vive fuera del Scaffold: sin Material los nombres salen subrayados.
     return Material(
       type: MaterialType.transparency,
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onHorizontalDragStart: (d) {
-          setState(() => _dragging = true);
-          _lens.stop();
-          _dragTo(d.localPosition.dx);
-        },
-        onHorizontalDragUpdate: (d) => _dragTo(d.localPosition.dx),
-        onHorizontalDragEnd: (_) {
-          setState(() => _dragging = false);
-          _select(TankeoTabBar.nearest(_lens.value));
-        },
-        onHorizontalDragCancel: () {
-          setState(() => _dragging = false);
-          _slideTo(widget.selectedIndex);
-        },
-        child: bar,
-      ),
-    );
-  }
-
-  Widget _item(int i, bool dark, double itemH) {
-    final on = i == widget.selectedIndex;
-    final color = on
-        ? (dark ? AppColors.primaryLight : AppColors.primary)
-        : (dark ? AppColors.tabInactiveDark : AppColors.tabInactive);
-    final dur = _reduce ? Duration.zero : const Duration(milliseconds: 200);
-    final showDot = widget.charging && i == TankeoTabBar.chargeTab;
-    return Semantics(
-      button: true,
-      selected: on,
-      label: widget.labels[i],
-      hint: showDot ? widget.chargingLabel : null,
-      excludeSemantics: true,
-      child: GestureDetector(
-        behavior: HitTestBehavior.opaque,
-        onTapDown: (_) => setState(() => _pressed = i),
-        onTapCancel: () => setState(() => _pressed = null),
-        onTapUp: (_) => setState(() => _pressed = null),
-        onTap: () => _select(i),
-        child: AnimatedScale(
-          scale: _pressed == i ? .92 : 1,
-          duration: _reduce ? Duration.zero : const Duration(milliseconds: 180),
-          curve: Curves.easeOutBack,
-          child: SizedBox(
-            width: TankeoTabBar.itemW,
-            height: math.max(itemH, 44),
-            child: TweenAnimationBuilder<Color?>(
-              tween: ColorTween(end: color),
-              duration: dur,
-              builder: (context, c, _) => Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 24,
-                    height: 24,
-                    child: Stack(
-                      clipBehavior: Clip.none,
-                      children: [
-                        _TabIcon(index: i, color: c ?? color, active: on),
-                        if (showDot)
-                          Positioned(
-                            top: -3,
-                            right: -5,
-                            child: ScaleTransition(
-                              scale: Tween(begin: 1.0, end: 1.25).animate(
-                                CurvedAnimation(
-                                  parent: _pulse,
-                                  curve: Curves.easeInOut,
-                                ),
-                              ),
-                              child: _ChargingDot(dark: dark),
-                            ),
-                          ),
-                      ],
-                    ),
-                  ),
-                  if (_reduce)
-                    _label(i, on, c ?? color)
-                  else
-                    AnimatedSize(
-                      duration: const Duration(milliseconds: 250),
-                      curve: Curves.easeOut,
-                      child: _label(i, on, c ?? color),
-                    ),
-                ],
+      child: Semantics(
+        hint: charging ? chargingLabel : null,
+        child: GlassTabBar.bottom(
+          selectedIndex: selectedIndex,
+          onTabSelected: onSelected,
+          horizontalPadding: horizontalPaddingFor(
+            MediaQuery.sizeOf(context).width,
+          ),
+          verticalPadding: verticalPadding,
+          barHeight: h,
+          barBorderRadius: h / 2,
+          settings: settings,
+          indicatorSettings: LiquidGlassSettings.ios27Indicator,
+          indicatorColor: (dark ? AppColors.white : AppColors.scrim).withValues(
+            alpha: dark ? .10 : .07,
+          ),
+          selectedIconColor: active,
+          unselectedIconColor: idle,
+          selectedLabelColor: active,
+          unselectedLabelColor: idle,
+          iconSize: 24,
+          iconLabelSpacing: 3,
+          labelFontSize: 10.5,
+          selectedLabelStyle: AppText.ui(10.5, AppText.w7, color: active),
+          unselectedLabelStyle: AppText.ui(10.5, AppText.w6, color: idle),
+          tabs: [
+            for (var i = 0; i < 4; i++)
+              GlassTab(
+                icon: icon(i, on: false),
+                activeIcon: icon(i, on: true),
+                label: compact ? null : labels[i],
+                semanticLabel: labels[i],
               ),
-            ),
-          ),
+          ],
         ),
       ),
     );
   }
-
-  Widget _label(int i, bool on, Color color) => widget.compact
-      ? const SizedBox(width: TankeoTabBar.itemW)
-      : Padding(
-          padding: const EdgeInsets.only(top: 3),
-          child: Text(
-            widget.labels[i],
-            maxLines: 1,
-            style: AppText.ui(
-              10.5,
-              on ? AppText.w7 : AppText.w6,
-              color: color,
-              height: 1.1,
-              letterSpacing: .1,
-            ),
-          ),
-        );
-
-  /// Matriz de saturación (como `saturate()` de CSS).
-  static List<double> _saturation(double s) {
-    const r = .2126, g = .7152, b = .0722;
-    return [
-      (1 - s) * r + s, (1 - s) * g, (1 - s) * b, 0, 0, //
-      (1 - s) * r, (1 - s) * g + s, (1 - s) * b, 0, 0, //
-      (1 - s) * r, (1 - s) * g, (1 - s) * b + s, 0, 0, //
-      0, 0, 0, 1, 0,
-    ];
-  }
-}
-
-/// Lente de la pestaña activa: cápsula gris sutil con brillo superior.
-class _Lens extends StatelessWidget {
-  const _Lens({required this.dark, required this.height});
-
-  final bool dark;
-  final double height;
-
-  @override
-  Widget build(BuildContext context) => DecoratedBox(
-    decoration: BoxDecoration(
-      color: dark
-          ? AppColors.white.withValues(alpha: .10)
-          : AppColors.scrim.withValues(alpha: .07),
-      borderRadius: BorderRadius.circular(height / 2),
-    ),
-    child: Align(
-      alignment: Alignment.topCenter,
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: height / 2),
-        child: SizedBox(
-          height: 1,
-          width: double.infinity,
-          child: ColoredBox(
-            color: AppColors.white.withValues(alpha: dark ? .2 : .6),
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-class _ChargingDot extends StatelessWidget {
-  const _ChargingDot({required this.dark});
-
-  final bool dark;
-
-  @override
-  Widget build(BuildContext context) => Container(
-    width: 12,
-    height: 12,
-    decoration: BoxDecoration(
-      color: dark ? AppColors.primaryLight : AppColors.primary,
-      shape: BoxShape.circle,
-      border: Border.all(
-        color: (dark ? AppColors.tabGlassDark : AppColors.tabGlass).withValues(
-          alpha: .95,
-        ),
-        width: 2,
-      ),
-    ),
-  );
 }
 
 /// Íconos de las pestañas (24 × 24). Activo: trazo 2.1 y relleno al 18 %.
@@ -443,11 +118,15 @@ class _TabIcon extends StatelessWidget {
     required this.index,
     required this.color,
     required this.active,
+    required this.charging,
+    required this.dark,
   });
 
   final int index;
   final Color color;
   final bool active;
+  final bool charging;
+  final bool dark;
 
   static const _paths = [
     // Auto
@@ -486,6 +165,72 @@ class _TabIcon extends StatelessWidget {
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" '
         'stroke="$hex" stroke-width="${active ? 2.1 : 1.8}" '
         'stroke-linecap="round" stroke-linejoin="round">$fill${_paths[index]}</svg>';
-    return SvgPicture.string(svg, width: 24, height: 24);
+    return SizedBox(
+      width: 24,
+      height: 24,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          SvgPicture.string(svg, width: 24, height: 24),
+          if (charging)
+            Positioned(top: -3, right: -5, child: ChargingDot(dark: dark)),
+        ],
+      ),
+    );
   }
+}
+
+/// Punto naranja de 8 con aro de 2 que late (1 → 1.25, 1.4 s).
+class ChargingDot extends StatefulWidget {
+  const ChargingDot({super.key, this.dark = false});
+
+  final bool dark;
+
+  @override
+  State<ChargingDot> createState() => _ChargingDotState();
+}
+
+class _ChargingDotState extends State<ChargingDot>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1400),
+  );
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (MediaQuery.disableAnimationsOf(context)) {
+      _c.stop();
+    } else if (!_c.isAnimating) {
+      _c.repeat(reverse: true);
+    }
+  }
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => ScaleTransition(
+    scale: Tween(
+      begin: 1.0,
+      end: 1.25,
+    ).animate(CurvedAnimation(parent: _c, curve: Curves.easeInOut)),
+    child: Container(
+      width: 12,
+      height: 12,
+      decoration: BoxDecoration(
+        color: widget.dark ? AppColors.primaryLight : AppColors.primary,
+        shape: BoxShape.circle,
+        border: Border.all(
+          color: (widget.dark ? AppColors.tabGlassDark : AppColors.tabGlass)
+              .withValues(alpha: .95),
+          width: 2,
+        ),
+      ),
+    ),
+  );
 }

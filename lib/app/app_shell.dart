@@ -83,27 +83,28 @@ class _AppShellState extends State<AppShell> {
             return Positioned(
               left: 0,
               right: 0,
+              // El paquete deja un margen vertical alrededor de la barra.
               bottom:
-                  TankeoTokens.navBottom + MediaQuery.paddingOf(context).bottom,
+                  TankeoTokens.navBottom +
+                  MediaQuery.paddingOf(context).bottom -
+                  TankeoTabBar.verticalPadding,
               child: IgnorePointer(
                 ignoring: hide,
                 child: AnimatedOpacity(
                   opacity: hide ? 0 : 1,
                   duration: const Duration(milliseconds: 300),
-                  child: Center(
-                    child: TankeoTabBar(
-                      selectedIndex: selected,
-                      compact: _compact,
-                      charging: s is! Idle,
-                      chargingLabel: l.navFuelInProgress,
-                      labels: [
-                        l.navTabCar,
-                        l.navTabFuel,
-                        l.navTabStations,
-                        l.navTabSettings,
-                      ],
-                      onSelected: _go,
-                    ),
+                  child: TankeoTabBar(
+                    selectedIndex: selected,
+                    compact: _compact,
+                    charging: s is! Idle,
+                    chargingLabel: l.navFuelInProgress,
+                    labels: [
+                      l.navTabCar,
+                      l.navTabFuel,
+                      l.navTabStations,
+                      l.navTabSettings,
+                    ],
+                    onSelected: _go,
                   ),
                 ),
               ),
