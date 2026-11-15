@@ -64,4 +64,9 @@ abstract final class AppImages {
 
   /// McLaren F1 visto desde arriba, vertical (frente arriba).
   static const carTopVertical = 'assets/images/car_topv.webp';
+
+  /// Logos oficiales de los accesos sociales del login.
+  static const logoGoogle = 'assets/images/logo_google.png';
+  static const logoApple = 'assets/images/logo_apple.png';
+  static const logoFacebook = 'assets/images/logo_facebook.png';
 }

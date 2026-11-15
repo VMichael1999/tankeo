@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/icons/icons.dart';
@@ -305,44 +304,20 @@ class _LoginFormState extends State<_LoginForm> {
               ],
             ),
             const SizedBox(height: 18),
-            Row(
+            const Row(
               children: [
                 Expanded(
-                  child: _Social(
-                    label: 'Google',
-                    child: Text(
-                      'G',
-                      style: AppText.ui(
-                        17,
-                        AppText.w8,
-                        color: AppColors.google,
-                      ),
-                    ),
-                  ),
+                  child: _Social(label: 'Google', logo: AppImages.logoGoogle),
                 ),
-                const SizedBox(width: 14),
+                SizedBox(width: 14),
                 Expanded(
-                  child: _Social(
-                    label: 'Apple',
-                    child: SvgPicture.string(_appleSvg, width: 16, height: 19),
-                  ),
+                  child: _Social(label: 'Apple', logo: AppImages.logoApple),
                 ),
-                const SizedBox(width: 14),
+                SizedBox(width: 14),
                 Expanded(
                   child: _Social(
                     label: 'Facebook',
-                    child: Text(
-                      'f',
-                      style:
-                          AppText.ui(
-                            17,
-                            AppText.w8,
-                            color: AppColors.facebook,
-                          ).copyWith(
-                            fontFamily: 'Georgia',
-                            fontFamilyFallback: const ['serif'],
-                          ),
-                    ),
+                    logo: AppImages.logoFacebook,
                   ),
                 ),
               ],
@@ -353,9 +328,6 @@ class _LoginFormState extends State<_LoginForm> {
       },
     );
   }
-
-  static const _appleSvg =
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13"><path d="M5.5 3c1-1.6 2.4-1.8 2.4-1.8M2.2 4.4c1.6-1 2.4 0 3.3 0s1.7-1 3.3 0c.9.5 1.3 1.4 1.4 2.1c-1.2.5-1.7 2.6-.1 3.6c-.6 1.4-1.6 2.9-2.6 2.9s-1.2-.6-2-.6s-1.2.6-2 .6c-1.4 0-3.3-3-3.1-5.6c.1-1.5.8-2.6 1.8-3z" fill="#111" stroke="#111" stroke-width=".6"/></svg>';
 }
 
 class _Field extends StatefulWidget {
@@ -446,11 +418,12 @@ class _FieldState extends State<_Field> {
   }
 }
 
+/// Botón de acceso social con el logo oficial (22 pt de alto).
 class _Social extends StatelessWidget {
-  const _Social({required this.label, required this.child});
+  const _Social({required this.label, required this.logo});
 
   final String label;
-  final Widget child;
+  final String logo;
 
   @override
   Widget build(BuildContext context) => Semantics(
@@ -464,7 +437,12 @@ class _Social extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: AppShadows.field,
       ),
-      child: child,
+      child: Image.asset(
+        logo,
+        height: 22,
+        filterQuality: FilterQuality.medium,
+        excludeFromSemantics: true,
+      ),
     ),
   );
 }

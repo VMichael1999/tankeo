@@ -134,8 +134,6 @@ abstract final class AppColors {
   static const yapeBg = Color(0xFFF1EAFB);
   static const yapeFg = Color(0xFF6B2BB8);
   static const visaFg = Color(0xFF1A1F71);
-  static const google = Color(0xFF4285F4);
-  static const facebook = Color(0xFF1877F2);
 
   // Mapa
   static const mapBase = Color(0xFFFAFAFB);
