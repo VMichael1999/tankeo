@@ -24,19 +24,18 @@
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/home.jpg" width="220" alt="Inicio"><br><sub>Inicio</sub></td>
-    <td align="center"><img src="docs/screenshots/map.jpg" width="220" alt="Grifos cercanos"><br><sub>Grifos cercanos</sub></td>
-    <td align="center"><img src="docs/screenshots/detail.jpg" width="220" alt="Detalle del grifo"><br><sub>Detalle del grifo</sub></td>
+    <td align="center"><img src="docs/screenshots/login.jpg" width="160" alt="Login"><br><sub>Login</sub></td>
+    <td align="center"><img src="docs/screenshots/home.jpg" width="160" alt="Inicio"><br><sub>Inicio</sub></td>
+    <td align="center"><img src="docs/screenshots/map.jpg" width="160" alt="Grifos cercanos"><br><sub>Grifos cercanos</sub></td>
+    <td align="center"><img src="docs/screenshots/detail.jpg" width="160" alt="Detalle del grifo"><br><sub>Detalle del grifo</sub></td>
+    <td align="center"><img src="docs/screenshots/navigation.jpg" width="160" alt="Navegación 3D"><br><sub>Navegación 3D</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/navigation.jpg" width="220" alt="Navegación 3D"><br><sub>Navegación 3D</sub></td>
-    <td align="center"><img src="docs/screenshots/arrival.jpg" width="220" alt="Llegada"><br><sub>Llegada al grifo</sub></td>
-    <td align="center"><img src="docs/screenshots/charge.jpg" width="220" alt="Carga"><br><sub>Carga</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/screenshots/settings.jpg" width="220" alt="Ajustes"><br><sub>Ajustes</sub></td>
-    <td align="center"><img src="docs/screenshots/history.jpg" width="220" alt="Historial"><br><sub>Historial de cargas</sub></td>
-    <td align="center"><img src="docs/screenshots/points.jpg" width="220" alt="Puntos"><br><sub>Puntos Tankeo</sub></td>
+    <td align="center"><img src="docs/screenshots/arrival.jpg" width="160" alt="Llegada al grifo"><br><sub>Llegada al grifo</sub></td>
+    <td align="center"><img src="docs/screenshots/charge.jpg" width="160" alt="Carga"><br><sub>Carga</sub></td>
+    <td align="center"><img src="docs/screenshots/settings.jpg" width="160" alt="Ajustes"><br><sub>Ajustes</sub></td>
+    <td align="center"><img src="docs/screenshots/history.jpg" width="160" alt="Historial de cargas"><br><sub>Historial de cargas</sub></td>
+    <td align="center"><img src="docs/screenshots/points.jpg" width="160" alt="Puntos Tankeo"><br><sub>Puntos Tankeo</sub></td>
   </tr>
 </table>
 

@@ -26,19 +26,18 @@
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/home.jpg" width="220" alt="Home"><br><sub>Home</sub></td>
-    <td align="center"><img src="docs/screenshots/map.jpg" width="220" alt="Nearby stations"><br><sub>Nearby stations</sub></td>
-    <td align="center"><img src="docs/screenshots/detail.jpg" width="220" alt="Station detail"><br><sub>Station detail</sub></td>
+    <td align="center"><img src="docs/screenshots/login.jpg" width="160" alt="Login"><br><sub>Login</sub></td>
+    <td align="center"><img src="docs/screenshots/home.jpg" width="160" alt="Home"><br><sub>Home</sub></td>
+    <td align="center"><img src="docs/screenshots/map.jpg" width="160" alt="Nearby stations"><br><sub>Nearby stations</sub></td>
+    <td align="center"><img src="docs/screenshots/detail.jpg" width="160" alt="Station detail"><br><sub>Station detail</sub></td>
+    <td align="center"><img src="docs/screenshots/navigation.jpg" width="160" alt="3D navigation"><br><sub>3D navigation</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/navigation.jpg" width="220" alt="3D navigation"><br><sub>3D navigation</sub></td>
-    <td align="center"><img src="docs/screenshots/arrival.jpg" width="220" alt="Arrival"><br><sub>Arrival at the station</sub></td>
-    <td align="center"><img src="docs/screenshots/charge.jpg" width="220" alt="Fueling"><br><sub>Fueling</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/screenshots/settings.jpg" width="220" alt="Settings"><br><sub>Settings</sub></td>
-    <td align="center"><img src="docs/screenshots/history.jpg" width="220" alt="History"><br><sub>Fueling history</sub></td>
-    <td align="center"><img src="docs/screenshots/points.jpg" width="220" alt="Points"><br><sub>Tankeo points</sub></td>
+    <td align="center"><img src="docs/screenshots/arrival.jpg" width="160" alt="Arrival at the station"><br><sub>Arrival at the station</sub></td>
+    <td align="center"><img src="docs/screenshots/charge.jpg" width="160" alt="Fueling"><br><sub>Fueling</sub></td>
+    <td align="center"><img src="docs/screenshots/settings.jpg" width="160" alt="Settings"><br><sub>Settings</sub></td>
+    <td align="center"><img src="docs/screenshots/history.jpg" width="160" alt="Fueling history"><br><sub>Fueling history</sub></td>
+    <td align="center"><img src="docs/screenshots/points.jpg" width="160" alt="Tankeo points"><br><sub>Tankeo points</sub></td>
   </tr>
 </table>
 
