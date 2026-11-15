@@ -16,6 +16,7 @@
 [![Liquid Glass](https://img.shields.io/badge/UI-Liquid%20Glass-F2620F)](https://pub.dev/packages/liquid_glass_widgets)
 [![Tests](https://img.shields.io/badge/tests-97%20passing-2EA44F)](test)
 [![Idioma](https://img.shields.io/badge/idioma-es--PE-D91023)](lib/l10n/app_es.arb)
+[![Licencia](https://img.shields.io/badge/licencia-todos%20los%20derechos%20reservados-555555)](LICENSE)
 
 </div>
 
@@ -130,6 +131,12 @@ En la navegación 3D, el auto es el modelo `assets/models/car.glb`. Se muestra e
 **Crédito:** «[McLaren F1 1993 by Alex.Ka.](https://sketchfab.com/3d-models/mclaren-f1-1993-by-alexka-294df724d96241cdbe0e0f3c91ad7fce)» de Alex.Ka., en Sketchfab. Licencia **CC BY-NC 4.0**: solo uso no comercial y con crédito al autor.
 
 El archivo está optimizado: sin planos de suelo, texturas a 1024 px y malla simplificada. Pasó de 12.7 MB a 1.8 MB.
+
+## Licencia
+
+© 2026 Michael Valdiviezo. **Todos los derechos reservados.** El código se publica solo para consulta; no se permite usarlo, copiarlo ni distribuirlo sin permiso por escrito. Ver [LICENSE](LICENSE).
+
+El modelo 3D (`assets/models/car.glb`) conserva su licencia CC BY-NC 4.0.
 
 ## Autor
 

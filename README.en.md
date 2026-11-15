@@ -16,6 +16,7 @@
 [![Liquid Glass](https://img.shields.io/badge/UI-Liquid%20Glass-F2620F)](https://pub.dev/packages/liquid_glass_widgets)
 [![Tests](https://img.shields.io/badge/tests-97%20passing-2EA44F)](test)
 [![Language](https://img.shields.io/badge/app%20language-es--PE-D91023)](lib/l10n/app_es.arb)
+[![License](https://img.shields.io/badge/license-all%20rights%20reserved-555555)](LICENSE)
 
 </div>
 
@@ -136,6 +137,12 @@ In 3D navigation, the car is the `assets/models/car.glb` model. It is rendered i
 **Credit:** "[McLaren F1 1993 by Alex.Ka.](https://sketchfab.com/3d-models/mclaren-f1-1993-by-alexka-294df724d96241cdbe0e0f3c91ad7fce)" by Alex.Ka., on Sketchfab. It is licensed under **CC BY-NC 4.0**, so it can only be used non-commercially and with credit to the author.
 
 The file is optimized: the ground planes were removed, the textures were reduced to 1024 px and the mesh was simplified. That took it from 12.7 MB to 1.8 MB.
+
+## License
+
+© 2026 Michael Valdiviezo. **All rights reserved.** The code is published for reference only; it may not be used, copied or distributed without written permission. See [LICENSE](LICENSE).
+
+The 3D model (`assets/models/car.glb`) keeps its CC BY-NC 4.0 license.
 
 ## Author
 
