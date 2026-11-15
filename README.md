@@ -117,7 +117,7 @@ lib/
     ├── stations/       # mapa, detalle, repositorios de Places y Routes
     ├── navigation/     # NavigationBloc, modo navegación y llegada
     ├── fueling/ queue/ # carga y cola en grifo lleno
-    ├── payment/ receipt/   # pago y comprobante
+    ├── payment/ receipt/ # pago y comprobante
     ├── account/        # ajustes, historial, notificaciones, puntos, facturación
     ├── vehicle/        # mis vehículos
     └── certification/  # certificación GNV

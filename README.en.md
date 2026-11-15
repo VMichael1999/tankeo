@@ -123,7 +123,7 @@ lib/
     ├── stations/       # map, detail, Places and Routes repositories
     ├── navigation/     # NavigationBloc, navigation mode and arrival
     ├── fueling/ queue/ # fueling and the queue at a full station
-    ├── payment/ receipt/   # payment and receipt
+    ├── payment/ receipt/ # payment and receipt
     ├── account/        # settings, history, notifications, points, billing
     ├── vehicle/        # my vehicles
     └── certification/  # CNG certification
