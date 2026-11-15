@@ -1235,6 +1235,11 @@
   "resetUpdate": "Actualizar contraseña",
   "toastPasswordUpdated": "Contraseña actualizada.",
   "toastCodeSent": "Te enviamos un código nuevo.",
+  "navTabCar": "Auto",
+  "navTabFuel": "Carga",
+  "navTabStations": "Grifos",
+  "navTabSettings": "Ajustes",
+  "navFuelInProgress": "Carga en curso",
   "minutes": "{n} min",
   "@minutes": {
     "placeholders": {

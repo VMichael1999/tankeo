@@ -3231,6 +3231,36 @@ abstract class AppL10n {
   /// **'Te enviamos un código nuevo.'**
   String get toastCodeSent;
 
+  /// No description provided for @navTabCar.
+  ///
+  /// In es, this message translates to:
+  /// **'Auto'**
+  String get navTabCar;
+
+  /// No description provided for @navTabFuel.
+  ///
+  /// In es, this message translates to:
+  /// **'Carga'**
+  String get navTabFuel;
+
+  /// No description provided for @navTabStations.
+  ///
+  /// In es, this message translates to:
+  /// **'Grifos'**
+  String get navTabStations;
+
+  /// No description provided for @navTabSettings.
+  ///
+  /// In es, this message translates to:
+  /// **'Ajustes'**
+  String get navTabSettings;
+
+  /// No description provided for @navFuelInProgress.
+  ///
+  /// In es, this message translates to:
+  /// **'Carga en curso'**
+  String get navFuelInProgress;
+
   /// No description provided for @minutes.
   ///
   /// In es, this message translates to:

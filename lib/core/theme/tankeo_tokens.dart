@@ -55,9 +55,10 @@ class TankeoTokens extends ThemeExtension<TankeoTokens> {
   static const double hSegment = 54;
   static const double hChip = 38;
   static const double hAmount = 46;
-  static const double navWidth = 270;
+  static const double navWidth = 316;
   static const double navHeight = 64;
-  static const double navBottom = 34;
+  static const double navBottom = 28;
+  static const double navHeightCompact = 52;
 
   // Lienzo de diseño (iPhone 16 Pro Max)
   static const double designWidth = 440;

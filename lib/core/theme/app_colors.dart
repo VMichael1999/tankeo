@@ -68,6 +68,12 @@ abstract final class AppColors {
   static const arrivalCardBorder = Color(0xFFECEEF1);
   static const arrivalPumpBg = Color(0xFFFFF3EB);
 
+  // Barra de pestañas (vidrio estilo iOS)
+  static const tabGlass = Color(0xFFFAFAFC);
+  static const tabGlassDark = Color(0xFF1C1C1E);
+  static const tabInactive = Color(0xFF3C3F46);
+  static const tabInactiveDark = Color(0xFFE5E5EA);
+
   // Navegación en marcha
   static const routeDone = Color(0xFFB9BEC7);
   static const speedLimitRing = Color(0xFFDC2626);

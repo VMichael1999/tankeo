@@ -239,6 +239,13 @@ def add(t):
     t('toastPasswordUpdated', 'Contraseña actualizada.')
     t('toastCodeSent', 'Te enviamos un código nuevo.')
 
+    # --- barra de pestañas
+    t('navTabCar', 'Auto')
+    t('navTabFuel', 'Carga')
+    t('navTabStations', 'Grifos')
+    t('navTabSettings', 'Ajustes')
+    t('navFuelInProgress', 'Carga en curso')
+
     # --- navegación
     t('minutes', '{n} min', n='int')
     t('navOverview', 'Vista general')

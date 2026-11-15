@@ -1782,6 +1782,21 @@ class AppL10nEs extends AppL10n {
   String get toastCodeSent => 'Te enviamos un código nuevo.';
 
   @override
+  String get navTabCar => 'Auto';
+
+  @override
+  String get navTabFuel => 'Carga';
+
+  @override
+  String get navTabStations => 'Grifos';
+
+  @override
+  String get navTabSettings => 'Ajustes';
+
+  @override
+  String get navFuelInProgress => 'Carga en curso';
+
+  @override
   String minutes(int n) {
     return '$n min';
   }
